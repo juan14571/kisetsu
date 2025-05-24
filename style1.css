@@ -1,0 +1,171 @@
+@font-face {
+  font-family:Niagato;
+  src:url(Niagato.ttf);
+ }
+@font-face {
+  font-family: Harukaze;
+  src:url(Harukaze.otf); 
+}
+
+ .Blossom{
+  font-family: Harukaze;
+   text-align: center;
+  font-size: 50px;
+ }
+
+
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family:sans-serif;
+  background-color:#f2f2f2 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ header {
+  width: 100%;
+  background-color:#ffa88c ;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: static; 
+  z-index: 1000;
+  min-height: 150px;
+}
+
+.logo{
+ height: 100px;
+  width: auto;
+  border-radius: 50%;
+  animation: rotar 8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+nav {
+  background-color: #ffcebf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-family: Niagato;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: rgb(225, 122, 122);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px 20px;
+  display: block;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  transform: translateY(-5px);
+  background-color: #4a0b0b;
+  color: white;
+  border-radius: 10px;
+}
+
+  main {
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.img-derecha {
+    float: right;
+    margin-left: 100px;
+     width: 150px;
+     margin-top: 120px;
+}
+
+ 
+.texto {
+    background-color: rgb(232, 214, 188);
+    width: 800px;
+    height: 500px;
+    margin: 70px auto;
+    position: relative; /* Necesario para centrar hijos con posición absoluta */
+}
+
+p {
+    background-color: white;
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    top: 45%;           /* Mueve hacia abajo 50% del alto del padre */
+    left: 50%;          /* Mueve hacia la derecha 50% del ancho del padre */
+    transform: translate(-50%, -50%); /* Lo centra desde su propio centro */
+}
+
+
+    .texto {
+        background-color: rgba(249, 232, 203, 0.633);
+        width: 500px;
+        height: 400px;
+        margin-left: 800px;
+        margin-top: -280px;
+        border-radius: 15px;
+    }
+    
+footer{
+
+    width: 97%;
+    height: 25px;
+    text-align: left;
+    background-color: rgb(249, 232, 203);
+    padding: 20px;
+
+   bottom: 0;
+    
+    }
+footer img {
+    height: 90%;
+    padding-left: 15%;
+    
+}
+
+footer img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+footer img:hover {
+    animation: palpitacion 1s infinite;
+}
+
+@keyframes palpitacion {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+      
+    

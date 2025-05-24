@@ -1,0 +1,240 @@
+@font-face {
+  font-family:Niagato;
+  src: url(../fonts/Niagato.ttf);
+ }
+@font-face {
+  font-family: Harukaze;
+  src: url(../fonts/Harukaze.otf); 
+}
+
+
+ .Blossom{
+  font-family: Harukaze;
+   text-align: center;
+  font-size: 50px;
+  margin: 0;
+ }
+
+
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family:sans-serif;
+  background-color:#f2f2f2 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-color:#ffa88c ;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: static; 
+  z-index: 1000;
+  min-height: 150px;
+}
+.logo{
+ height: 100px;
+  width: auto;
+  border-radius: 50%;
+  animation: rotar 8s linear infinite;
+  margin-bottom: 10px;
+}
+
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+nav {
+  background-color: #ffcebf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-family: Niagato;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: rgb(225, 122, 122);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px 20px;
+  display: block;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  transform: translateY(-5px);
+  background-color: #4a0b0b;
+  color: white;
+  border-radius: 10px;
+}
+
+  main {
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  display: grid;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  width: 75%;
+  display: flex; 
+  align-items: center;
+}
+
+.recuadro {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: #f1d1ab;
+  display: flex;
+}
+
+.recuadro:hover {
+  transform: translateY(-5px);
+}
+
+.recuadro img {
+  width: 50%;
+  height: 150px;
+  object-fit:contain;
+  border-radius: 20px;
+  object-position: center;
+  animation: aparecerDeLasSombras 2.5s ease-out forwards,
+             auraOscura 1.5s infinite alternate,
+             parpadeo 0.1s ease-in-out 3s 3;
+  filter: brightness(0.5);
+}
+
+
+
+@keyframes aparecerDeLasSombras {
+  0% {
+    transform: scale(1.5) translateY(200px);
+    opacity: 0;
+    filter: brightness(0) blur(10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes auraOscura {
+  0% {
+    filter: drop-shadow(0 0 10px #330066);
+  }
+  100% {
+    filter: drop-shadow(0 0 25px #6600cc);
+  }
+}
+
+.image {
+  height: 100vh;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 84, 84);
+  margin: 15%;
+  opacity: 0;
+  animation: llegadaDelCielo 2s ease-out forwards,
+             auraSaiyan 1s infinite alternate 2s;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+@keyframes llegadaDelCielo {
+  50% {
+    transform: translateY(-300px) scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 5;
+  }
+}
+
+@keyframes auraSaiyan {
+  50% {
+    filter: drop-shadow(0 0 15px #ff5c5c);
+  }
+  100% {
+    filter: drop-shadow(0 0 30px #ae05cf);
+  }
+}
+.recuadro p{
+  margin: 10px;
+  color: #dedede;
+  background-color: #731b079f;
+  border-radius: 15px;
+  font-family: Niagato;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+h5{
+  font-family: Niagato;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+footer{
+  width: 97%;
+  height: 25px;
+  text-align: left;
+  background-color: rgb(250, 230, 196);
+  padding: 20px;
+  bottom: 0;
+
+    }
+
+footer img {
+    height: 90%;
+    padding-left: 15%;
+}
+
+footer img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+footer img:hover {
+    animation: palpitacion 1s infinite;
+}
+
+@keyframes palpitacion {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
