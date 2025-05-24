@@ -1,0 +1,160 @@
+@font-face {
+  font-family:Niagato;
+  src: url(Niagato.ttf);
+ }
+@font-face {
+  font-family: Harukaze;
+  src: url(Harukaze.otf); 
+}
+
+header {
+    width: 1500px;
+    height: 150px;
+    background-color:rgb(244, 167, 150);
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+ 
+ .Blossom{
+  font-family: Harukaze;
+   text-align: center;
+  font-size: 50px;
+  margin: 0;
+ }
+
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family:sans-serif;
+  background-color:#f2f2f2 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ header {
+  width: 100%;
+  background-color:#ffa88c ;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: static; 
+  z-index: 1000;
+}
+
+.logo{
+   height: 100px;
+  width: auto;
+  border-radius: 50%;
+  animation: rotar 8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+nav {
+  background-color: #ffcebf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-family: Niagato;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: rgb(225, 122, 122);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px 20px;
+  display: block;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  transform: translateY(-5px);
+  background-color: #4a0b0b;
+  color: white;
+  border-radius: 10px;
+}
+
+  main {
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+  .img-derecha {
+    float: right;
+    margin-left: 10px;
+     width: 150px;
+}
+ 
+.texto {
+     
+    background-color: rgb(232, 214, 188);
+    width: 700px;
+    height: 500px;
+    margin: 70px auto;
+    border-radius: 15px;
+    }
+
+
+
+ 
+footer{
+
+    width: 97%;
+    height: 25px;
+    text-align: left;
+    background-color: rgb(250, 230, 196);
+    padding: 20px;
+
+   bottom: 0;
+    
+    }
+footer img {
+    
+    height: 90%;
+    padding-left: 15%;
+    
+    
+}
+footer img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+footer img:hover {
+    animation: palpitacion 1s infinite;
+}
+
+@keyframes palpitacion {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+    

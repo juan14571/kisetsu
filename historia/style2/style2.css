@@ -1,0 +1,252 @@
+ @font-face {
+  font-family:Niagato;
+  src: url(../fonts/Niagato.ttf);
+ }
+@font-face {
+  font-family: Harukaze;
+  src: url(../fonts/Harukaze.otf);
+ }
+ .Blossom{
+  font-family: Harukaze;
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+ }
+
+ body {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+ header {
+  width: 100%;
+  background-color:#ffa88c ;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: static; 
+  z-index: 1000;
+}
+
+.logo{
+ height: 100px;
+  width: auto;
+  border-radius: 50%;
+  animation: rotar 8s linear infinite;
+  margin-bottom: 10px;
+}
+
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+nav {
+  background-color: #ffcebf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: rgb(225, 122, 122);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px 20px;
+  display: block;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  transform: translateY(-5px);
+  background-color: #4a0b0b;
+  color: white;
+  border-radius: 10px;
+}
+
+ 
+main{
+  background-color: rgb(85, 8, 8);
+  width: auto;
+  margin: auto;
+  border-radius: initial;
+  height: auto;
+}
+
+.history{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2px;
+padding: 40px;
+background-color: #de5959;
+margin-top: 25px;
+width: auto;
+font-size: larger;
+}
+
+
+
+.chino{
+  width: 293px;
+  height: 172px;
+  animation: aparecerDeLasSombras 2.5s ease-out forwards,
+  auraOscura 1.5s infinite alternate,
+  parpadeo 0.1s ease-in-out 3s 3;
+filter: brightness(0.5);
+}
+@keyframes aparecerDeLasSombras {
+0% {
+transform: scale(1.5) translateY(200px);
+opacity: 0;
+filter: brightness(0) blur(10px);
+}
+100% {
+transform: scale(1) translateY(0);
+opacity: 1;
+filter: brightness(1) blur(0);
+}
+}
+
+@keyframes auraOscura {
+0% {
+filter: drop-shadow(0 0 10px #330066);
+}
+100% {
+filter: drop-shadow(0 0 25px #6600cc);
+}
+}
+
+
+.historia{
+  font-size: xx-large;
+  text-align: center;
+}
+.unico{
+  font-size: xx-large;
+  text-align: center;
+  
+}
+.contenido {
+  font-size: larger;
+}
+.esperamos{
+  text-align: center;
+  font-size: xx-large;
+}
+.image{
+  height: 100vh;
+  width: 900px;
+  align-items: center;
+  background-color: rgb(247, 84, 84);
+  margin:15%;
+  opacity: 0;
+    animation: llegadaDelCielo 2s ease-out forwards,
+               auraSaiyan 1s infinite alternate 2s;
+    filter: drop-shadow(0 0 0 transparent);
+    
+}
+@keyframes llegadaDelCielo {
+  50% {
+    transform: translateY(-300px) scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 5;
+  }
+}
+ /* Aura dorada estilo Super Saiyan */
+ @keyframes auraSaiyan {
+  50% {
+    filter: drop-shadow(0 0 15px #ff5c5c);
+  }
+  100% {
+    filter: drop-shadow(0 0 30px #ae05cf);
+  }
+}
+.chefsito{
+  width: 293px;
+  height: 172px;
+  animation: aparecerDeLasSombras 2.5s ease-out forwards,
+             auraOscura 1.5s infinite alternate,
+             parpadeo 0.1s ease-in-out 3s 3;
+  filter: brightness(0.5);
+}
+@keyframes aparecerDeLasSombras {
+  0% {
+    transform: scale(1.5) translateY(200px);
+    opacity: 0;
+    filter: brightness(0) blur(10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes auraOscura {
+  0% {
+    filter: drop-shadow(0 0 10px #330066);
+  }
+  100% {
+    filter: drop-shadow(0 0 25px #6600cc);
+  }
+}
+
+footer{
+  width: 97%;
+  height: 25px;
+  text-align: left;
+  background-color: rgb(250, 230, 196);
+  padding: 20px;
+  bottom: 0;
+
+    }
+
+footer img {
+    height: 90%;
+    padding-left: 15%;
+}
+
+footer img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+footer img:hover {
+    animation: palpitacion 1s infinite;
+}
+
+@keyframes palpitacion {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+*{
+  font-family: Niagato;
+  font-size: large;
+}
